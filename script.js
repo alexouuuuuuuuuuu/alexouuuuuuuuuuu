@@ -149,19 +149,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
 
-    
     gsap.timeline({
         scrollTrigger: {
-            trigger: '.section8',
-            start: 'top 80%',
-            end: 'top 50%',
+            trigger: '.section8__pyramid',
+            start: 'top 50%',
+            end: 'bottom 0%',
             scrub: true,
-            markers: false,
-            toggleActions: "play none none none"
+            markers: false
         }
+        
     })
     .fromTo(
-        ".section8", 
+        ".section8__cone", 
         { x: "-100%", opacity: 0 },
         { x: "0%", opacity: 1, duration: 1, ease: "power2.out" }
     )
@@ -176,7 +175,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         { x: "-100%", opacity: 0 },
         { x: "0%", opacity: 1, duration: 1, ease: "power2.out" },
         "<0.5"
-    );});
+    );
 
 
     const ball1 = gsap.timeline({
@@ -305,4 +304,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrub: true,
     });
     
-
+});
