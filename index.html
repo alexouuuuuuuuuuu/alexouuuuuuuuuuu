@@ -259,7 +259,6 @@
             <img src="./assets/megaphone.svg" alt="megaphone">
         </div>
 
-        <div class="section7__container-boules">
 
 
             <div class="section7__boule-rose1">
@@ -281,6 +280,19 @@
                 <p class="section7__info2-text">
                     Des français sont exposé au moins 1 fois par mois aux fake news
                 </p>
+                <script>
+                    const ball1 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: '.section5__container-garcon',
+                            start: 'top 80%',
+                            end: 'top 50%',
+                            scrub: true,
+                            markers: false
+                        }
+                    });
+                
+                    garcon.to('.section5__container-garcon', { x: 1380, y: -150, duration: 1 });
+                </script>
             </div>
 
             <div class="section7__boule-violet1">   
@@ -292,7 +304,7 @@
             <div class="section7__boule-bleu">
             </div>
 
-            <div class="section7__boule-violet">
+            <div class="section7__boule-violet2">
             </div>
 
 
@@ -309,12 +321,11 @@
                 <div class="section7__boule-violet3">
                     <p class="section7__boule-violet3-text">72%</p>
                 </div>
-                <p class="section7__info3-text">
+                <p class="section7__info4-text">
                     Des français pensent qu’il est difficile de distinguer un média serieux qui relaye des vraies informations, d’un site relayant des informations non vérifiées
                 </p>
             </div>
 
-        </div>
     </section>
 
 
