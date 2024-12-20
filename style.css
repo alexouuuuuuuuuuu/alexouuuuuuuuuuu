@@ -3,7 +3,9 @@ body{
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
 
 .nav__container{
     display: flex;
@@ -22,8 +24,28 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 3rem;
+    
 }
 
+.section6__container{
+    margin-bottom: 5rem;
+}
+
+.section6__container-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.section6__image{
+    width: 80%;
+    height: auto;
+    z-index: 1;
+}
+.nav__container-list a{
+    text-decoration: none;
+}
 
 
 .nav__container-list li{
@@ -66,7 +88,10 @@ body{
 
 }
 
-
+.section1__star1{
+    position: absolute;
+    z-index: 15;
+}
 
 
 .section1__image-text{
@@ -210,6 +235,42 @@ span{
 }
 
 
+@media (max-width: 768px) {
+    .section2__container {
+        height: auto;
+    }
+
+    .section2__container-image,
+    .section2__container-forme1,
+    .section2__image-text1,
+    .section2__container-forme2,
+    .section2__image-text2,
+    .section2__container-forme3,
+    .section2__image-text3,
+    .section2__container-forme4,
+    .section2__image-text4,
+    .section2__container-forme5 {
+        position: static;
+        width: 100%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: none;
+        margin: 1rem 0;
+    }
+
+    .section2__container-forme1,
+    .section2__container-forme2,
+    .section2__container-forme3,
+    .section2__container-forme4,
+    .section2__container-forme5 {
+        background-size: cover;
+    }
+}
+
+
 
 .section3__container{
     position: relative;
@@ -237,7 +298,7 @@ span{
     display: flex;
     justify-content: center;
     margin-top: 5rem;
-    margin-bottom: 10rem;
+
 }
 
 .section4__container-text{
@@ -253,9 +314,8 @@ span{
 
 .section5__container{
     background-image: url(./assets/bk-section5.svg);
-
     background-repeat: no-repeat;
-
+    background-size: cover;
     margin-bottom: 10rem;
 }
 
@@ -273,18 +333,22 @@ span{
 
 
 
-.section6__container{
-    background-image: url(./assets/bk-section6.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    margin-bottom: 10rem;
-}
-
-.section6__container-image{
+.section6__container {
+    position: relative;
+    height: 100vh; /* Section pleine hauteur */
     display: flex;
     justify-content: center;
-    margin-bottom: 10rem;
+    align-items: center;
+}
+
+
+.animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Conteneur couvrant toute la section */
+    pointer-events: none; /* Les boules ne bloquent pas les clics */
 }
 
 
@@ -294,13 +358,13 @@ span{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 5rem;
+    margin-block: 20rem;
 }
 
 .section7__container-image {
     position: relative;
     z-index: 1;
-    margin-right: 2rem; /* Adjust the spacing as needed */
+    margin-right: 2rem; 
 }
 
 .section7__container-boules {
@@ -321,48 +385,54 @@ span{
 .section7__boule-violette2,
 .section7__boule-violette3,
 .section7__boule-jaune,
+.section7__boule-verte,
 .section7__boule-jaune2 {
     position: absolute;
 }
 
 .section7__boule-bleu {
-    top: -2rem;
-    left: -3rem;
+    top: -5rem;
+    left: -17rem;
 }
 
 .section7__boule-rose {
-    top: 1rem;
-    left: 2rem;
+    top: -20rem;
+    left: -1rem;
 }
 
 .section7__boule-rose2 {
-    top: -1rem;
-    left: 5rem;
+    top: -5rem;
+    left: 13rem;
 }
 
 .section7__boule-violette {
     top: 3rem;
-    left: -1rem;
+    left: -10rem;
 }
 
 .section7__boule-violette2 {
-    top: 4rem;
-    left: 4rem;
+    top: -4rem;
+    left: -0rem;
 }
 
 .section7__boule-violette3 {
-    top: 0rem;
-    left: 7rem;
+    top: -13rem;
+    left: 20rem;
 }
 
 .section7__boule-jaune {
-    top: 2rem;
+    top: -22rem;
     left: 8rem;
 }
 
 .section7__boule-jaune2 {
-    top: -3rem;
-    left: 10rem;
+    top: -11rem;
+    left: 30rem;
+}
+
+.section7__boule-verte{
+    top: -16rem;
+    left: -12rem;
 }
 
 
@@ -374,6 +444,7 @@ span{
     background-color: var(--clr-footer);
     padding-bottom:3rem;
     margin-top: 3rem;
+    gap: 2rem;
 }
 
 .footer__container-text{
@@ -382,6 +453,10 @@ span{
     flex-direction: row;
     margin-top: 3rem;
     gap: 5rem;
+}
+
+.footer__container-text a{
+    text-decoration: none;
 }
 
 .footer__category{
@@ -429,3 +504,176 @@ span{
     text-decoration: underline;
     text-underline-offset: 0.3em;
 }
+
+
+
+.section8__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section8__container-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4__graphe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 85rem;
+    height: 40rem;
+}
+
+.section8__graphe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 5rem;
+    width: 100rem;
+    height: 40rem;
+}
+
+.section8__titre{
+    margin-block: 3rem;
+}
+
+.section3v2__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/fond\ ordinateur.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-block: 10rem;
+}
+
+.section3v2__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 5rem;
+    width: 80rem;
+    height: 80rem;
+    rotate: 10deg;
+}
+
+
+.section1__star{
+    position: absolute;
+    z-index: 100;
+    top: 10%;
+}
+
+
+.section1__star2{
+    position: absolute;
+    z-index: 101;
+    left: 5%;
+}
+
+.section3__star1{
+    position: absolute;
+    z-index: 102;
+    right: 5%;
+}
+
+.section10__container {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+}
+
+
+.section10__marionnette-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Pour permettre un placement absolu des enfants */
+    height: 900px; /* Ajuste en fonction de tes besoins */
+    overflow: hidden; /* Empêche les images de dépasser */
+}
+
+.section10__container img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    min-width: 30rem;
+}
+
+.section10__marionnette1 {
+    position: absolute; /* Positionnement relatif au parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.section10__marionnette2 {
+    position: absolute; /* Positionnement relatif au parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.section3__star1{
+    position: absolute;
+    z-index: 102;
+    top: 5%;
+}
+
+.section3__star2{
+    position: absolute;
+    z-index: 102;
+    bottom: 15%;
+}
+
+.section3__star3{
+    position: absolute;
+    z-index: 102;
+    left: 40%;
+    top: 10%;
+}
+
+.section3__star4{
+    position: absolute;
+    z-index: 102;
+    left: 20%;
+}
+
+
+.section6__carre{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--clr-yellow);
+}
+
+.section6__rect{
+    position: absolute;
+    width: 8rem;
+    height: 5rem;
+    background-color: var(--clr-blue);
+}
+
+.section6__ball {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--clr-pink);
+    border-radius: 50%;
+}
+
+.section6__triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 2.5rem solid transparent;
+    border-right: 2.5rem solid transparent;
+    border-bottom: 5rem solid var(--clr-green);
+}
+

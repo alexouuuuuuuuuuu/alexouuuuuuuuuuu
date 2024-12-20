@@ -8,30 +8,70 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="variables.css">
     <link rel="icon" href="./assets/logo.svg">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <section class="nav__container">
+    <nav class="nav__container" id="accueil">
         <group class="nav__container-logo">
             <a href="index.html">
                 <img src="./assets/logo.svg" alt="logo True News">
             </a>
         </group>
         <ul class="nav__container-list">
-            <li class="nav__accueil">Accueil</li>
-            <li class="nav__informations">Informations</li>
-            <li class="nav__fakenews">Fake News</li>
-            <li class="nav__contact">Contact</li>
+            <li class="nav__accueil"><a href="#">Accueil</a></li>
+            <li class="nav__informations"><a href="#">Informations</a></li>
+            <li class="nav__fakenews"><a href="#section6__fake-news">Fake News</a></li>
+            <li class="nav__contact"><a href="#footer">Contact</a></li>
         </ul>
-    </section>
+    </nav>
 
     <section class="section1__container">
+        <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section1__star">
+        <script>
+            const etoile = document.querySelector('.section1__star');
+
+            function rotateEtoile() {
+            gsap.to(etoile, {
+                duration: 1, 
+                rotation: '+=360', 
+                ease: 'power2.inOut',
+                onComplete: () => {
+                }
+            });
+            }
+
+            setInterval(rotateEtoile, 5000);
+        </script>
+
+
+        <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section1__star2">
+        <script>
+        const etoile2 = document.querySelector('.section1__star2');
+        
+        function rotateEtoile2() {
+        gsap.to(etoile2, {
+            duration: 1, 
+            rotation: '+=360', 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+            }
+        });
+        }
+
+        setInterval(rotateEtoile2, 5000);
+        </script>
+        
+                    // Boucle d'animation toutes les 5 secondes
+                    setInterval(rotateEtoile, 5000);
+                </script>
         <div class="section1__container-image">
             <img src="./assets/feu-de-camp.svg" alt="feu de camp">
             <h2 class="section1__image-text">94%</h2>
         </div>
         <h3 class="section1__text">des Français s’informent tous les jours</h3>
-        <img class="section1__fille" src="./assets/fille.svg" alt="fille a gauche qui s'amuse">
-        <img class="section1__garcon" src="./assets/garcon.svg" alt="garcon a droite qui s'amuse">
+        <img class="section1__fille" src="./assets/fille.svg" alt="fille a droite qui s'amuse">
+        <img class="section1__garcon" src="./assets/garcon.svg" alt="garcon a gauche qui s'amuse">
 
     </section>
 
@@ -64,48 +104,99 @@
         <div class="section2__container-forme5"></div>
             <p class="section2__image-text5">79% des Français suivent régulièrement au moins un journal télévisé, tandis que <span>61%</span> consultent les chaînes d’information.</p>
         </div>
+    </div>
 
     </section>
+
 
 
     
-    <section>
-        <!-- Canvas element where the Lottie animation will be rendered -->
-        <canvas id="canvas" width="300" height="300"></canvas>
-        <script type="module">
-            import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 
-            const lottieAnimation = new DotLottie({
-                autoplay: false,
-                loop: true,
-                canvas: document.getElementById("canvas"),
-                src: "./assets/graphe.lottie",
-                duration: 1,
-            });
 
-            window.addEventListener('scroll', () => {
-                const canvas = document.getElementById("canvas");
-                const rect = canvas.getBoundingClientRect();
-                if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-                    lottieAnimation.play();
-                } else {
-                    lottieAnimation.stop();
-                }
+
+    <section class="section3v2__container">
+        <img class="section3v2__image" src="./assets/ordinateur.svg" alt="ordinateur avec dedans un graphe">
+        <script>
+            const ordinateur = document.querySelector('.section3v2__image');
+            gsap.to(ordinateur, {
+                y: 20, // Change the value to adjust the descent speed
+                duration: 2,
+                scrollTrigger: {
+                    trigger: '.section3v2__image',
+                    toggleActions: 'restart reverse play reverse',
+                    start: 'center center', // Change the start position to 'center center'
+                    end: 'bottom center',
+                    markers: true,
+                    scrub: 1,
+                    pin : true,
+                },
             });
+            
         </script>
     </section>
 
-    </section>
+
+
 
     <section class="section3__container">
-        
+        <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section3__star1 scroll-object">
+        <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section3__star2 scroll-object">
+        <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section3__star3 scroll-object">
+        <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section3__star4 scroll-object">
+
+        <script>
+            const scrollObjects = document.querySelectorAll('.scroll-object');
+
+            function rotateOnScroll() {
+            const scrollTop = window.scrollY; 
+            const rotationValue = scrollTop * 0.2;
+
+            scrollObjects.forEach(scrollObject => {
+                gsap.to(scrollObject, {
+                duration: 0.2, 
+                rotation: rotationValue, 
+                ease: 'none', 
+                });
+            });
+            }
+
+            window.addEventListener('scroll', rotateOnScroll);
+        </script>
+
     </section>
 
 
     <section class="section4__container">
         <h2>Les Français s’informent davantage</h2>
         <div class="section4__container-image">
-            <img src="./assets/courbe.svg" alt="diagramme">
+
+        <canvas id="courbe-jaune" class="section4__graphe"></canvas>
+        <script type="module">
+            import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+            const lottieAnimation2 = new DotLottie({
+            autoplay: false,
+            loop: false,
+            canvas: document.getElementById("courbe-jaune"),
+            src: "./assets/courbe.lottie",
+            duration: 1,
+            });
+
+            let hasPlayed = false;
+
+            window.addEventListener('scroll', () => {
+            if (!hasPlayed) {
+                const canvas = document.getElementById("courbe-jaune");
+                const rect = canvas.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                lottieAnimation2.play();
+                hasPlayed = true;
+                }
+            }
+            });
+
+        </script>
+
         </div>
         <div class="section4__container-text">
             <p class="section4__desc">En 2023, l'envie de s'informer davantage 
@@ -124,20 +215,96 @@
     <section class="section5__container">
         <h2 class="section5__titre">Les Français multiplient les sources d’information</h2>
         <div class="section5__container-image">
-            <img src="./assets/graphe.svg" alt="graphe">
+            <canvas id="graphe2" class="section4__graphe"></canvas>
+            <script type="module">
+                import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+                const lottieAnimation4 = new DotLottie({
+                autoplay: false,
+                loop: false,
+                canvas: document.getElementById("graphe2"),
+                src: "./assets/graphe2.lottie",
+                duration: 1,
+                });
+
+                let hasPlayed3 = false;
+
+                window.addEventListener('scroll', () => {
+                if (!hasPlayed3) {
+                    const canvas = document.getElementById("graphe2");
+                    const rect = canvas.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                    lottieAnimation4.play();
+                    hasPlayed3 = true;
+                    }
+                }
+                });
+
+        </script>
         </div>
         <p class="section5__desc">En moyenne, les Français consultent régulièrement 9 sources d’information.</p>
     </section>
 
 
 
-    <section class="section6__container">
+    <section class="section6__container" id="section6__fake-news">
         <div class="section6__container-image">
-            <img src="./assets/tele.svg" alt="tele">
+            <img class="section6__image" src="./assets/tele.svg" alt="tele">
+            <div class="animation-container" id="container">
+                <div class="section6__carre"></div>
+                <div class="section6__carre"></div>
+                <div class="section6__carre"></div>
+                <div class="section6__rect"></div>
+                <div class="section6__rect"></div>
+                <div class="section6__triangle"></div>
+                <div class="section6__triangle"></div>
+                <div class="section6__triangle"></div>
+                <div class="section6__ball"></div>
+                <div class="section6__ball"></div>
+            </div>
         </div>
-
     </section>
 
+
+    <script>
+        // Initialisation de GSAP et ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Sélection de toutes les boules
+        const balls = document.querySelectorAll('.section6__ball, .section6__triangle, .section6__rect, .section6__carre');
+        const container = document.getElementById('container');
+        const section = document.querySelector('.section6__container');
+
+        // Centre de la section
+        const sectionRect = section.getBoundingClientRect();
+        const centerX = sectionRect.width / 2 ;
+        const centerY = sectionRect.height / 2;
+
+        // Position initiale des boules : toutes au même point (centre de la section)
+        balls.forEach(ball => {
+            ball.style.left = `${centerX}px`;
+            ball.style.top = `${centerY}px`;
+        });
+
+        // Animation de dispersion au scroll
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top center", // L'animation commence quand le haut de la section est visible au centre
+                end: "bottom top", // L'animation termine quand le bas de la section quitte le haut de la fenêtre
+                scrub: true, // Synchronisation avec le défilement
+                once: true, // L'animation se joue une seule fois
+            },
+        }).to(balls, {
+            x: () => Math.random() * sectionRect.width * 1.5 - centerX, // Dispersion horizontale aléatoire
+            y: () => Math.random() * sectionRect.height * 1.2 - centerY, // Dispersion verticale aléatoire
+            rotation: () => Math.random() * 360, // Rotation aléatoire
+            scale: () => 0.8 + Math.random() * 0.5, // Variation de taille aléatoire
+            duration: 2,
+            ease: "power2.out", // Mouvement fluide
+            stagger: 0.1, // Les boules se dispersent l'une après l'autre
+        });
+    </script>
 
     
     <section class="section7__container">
@@ -154,18 +321,79 @@
             <img src="./assets/section7/boule-violete3.svg" alt="boule" class="section7__boule-violette3">
             <img src="./assets/section7/boule-jaune.svg" alt="boule" class="section7__boule-jaune">
             <img src="./assets/section7/boule-jaune2.svg" alt="boule" class="section7__boule-jaune2">
+            <img src="./assets/section7/boule-verte.svg" alt="boule" class="section7__boule-verte">
+
 
         </div>
         
     </section>
 
 
-    <footer class="footer__container">
+    <div class="section8__container-titre">
+        <h2 class="section8__titre">Pyramide de la confiance</h2>
+    <div>
+        
+    <section class="section8__container">
+        <div class="section8__container-image">
+        
+        <canvas id="pyramide" class="section8__graphe"></canvas>
+        <script type="module">
+            import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+            const lottieAnimation3 = new DotLottie({
+                autoplay: false,
+                loop: false,
+                canvas: document.getElementById("pyramide"),
+                src: "./assets/pyramide.lottie",
+                duration: 1,
+            });
+
+            let hasPlayed2 = false;
+        
+            window.addEventListener('scroll', () => {
+            if (!hasPlayed2) {
+                const canvas = document.getElementById("pyramide");
+                const rect = canvas.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                    lottieAnimation3.play();
+                hasPlayed2 = true;
+                }
+                }
+            });
+
+        </script>
+        </div>
+
+
+        <div class="section8__container-text">
+            <p class="section8__text">La pyramide de la confiance illustre la hiérarchie perçue par les Français : les entreprises restent stables, tandis que la confiance envers les médias demeure faible.</p>
+            <p class="section8__text">*Organisation non gouvernementale</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="section10__container">
+        <h2>Plus de 60% des Français adhèrent à au moins une théorie complotiste</h2>
+        <div class="section10__marionnette-container">
+            <img src="./assets/marionnette1.svg" alt="marionnette 1" class="section10__marionnette1">
+            <img src="./assets/marionnette2.svg" alt="marionnette 2" class="section10__marionnette2">
+        </div>
+    </section>
+
+
+
+    <footer class="footer__container" id="footer">
         <ul class="footer__container-text">
-            <li class="footer__category">True News</li>
-            <li class="footer__category">Accueil</li>
-            <li class="footer__category">Informations</li>
-            <li class="footer__category">Fake News</li>
+            <li class="footer__category"><a href="#accueil">True News</a></li>
+            <li class="footer__category"><a href="#accueil">Accueil</a></li>
+            <li class="footer__category"><a href="#accueil">Informations</a></li>
+            <li class="footer__category"><a href="#section6__fake-news">Fake News</a></li>
             <li class="footer__category">Contact</li>
         </ul>
         <div>
@@ -189,8 +417,8 @@
 
    
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
