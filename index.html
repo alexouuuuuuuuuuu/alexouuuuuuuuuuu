@@ -13,11 +13,11 @@
 </head>
 <body>
     <nav class="nav__container" id="accueil">
-        <group class="nav__container-logo">
+        <div class="nav__container-logo">
             <a href="index.html">
                 <img src="./assets/logo.svg" alt="logo True News">
             </a>
-        </group>
+        </div>
         <ul class="nav__container-list">
             <li class="nav__accueil"><a href="#">Accueil</a></li>
             <li class="nav__informations"><a href="#">Informations</a></li>
@@ -271,6 +271,7 @@
                 <p class="section7__info1-text">
                     Des français déclarent avoir deja relayé une fake news
                 </p>
+
             </div>
 
             <div class="section7__info2">
@@ -280,19 +281,6 @@
                 <p class="section7__info2-text">
                     Des français sont exposé au moins 1 fois par mois aux fake news
                 </p>
-                <script>
-                    const ball1 = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: '.section5__container-garcon',
-                            start: 'top 80%',
-                            end: 'top 50%',
-                            scrub: true,
-                            markers: false
-                        }
-                    });
-                
-                    garcon.to('.section5__container-garcon', { x: 1380, y: -150, duration: 1 });
-                </script>
             </div>
 
             <div class="section7__boule-violet1">   
@@ -324,46 +312,56 @@
                 <p class="section7__info4-text">
                     Des français pensent qu’il est difficile de distinguer un média serieux qui relaye des vraies informations, d’un site relayant des informations non vérifiées
                 </p>
+
             </div>
 
     </section>
 
 
-    <div class="section8__container-titre">
-        <h2 class="section8__titre">Pyramide de la confiance</h2>
-    <div>
+
         
     <section class="section8__container">
-        <div class="section8__container-image">
-        
-        <canvas id="pyramide" class="section8__graphe"></canvas>
-        <script type="module">
-            import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 
-            const lottieAnimation3 = new DotLottie({
-                autoplay: false,
-                loop: false,
-                canvas: document.getElementById("pyramide"),
-                src: "./assets/pyramide.lottie",
-                duration: 1,
-            });
+        <h2 class="section8__titre">Pyramide de la confiance</h2>
 
-            let hasPlayed2 = false;
-        
-            window.addEventListener('scroll', () => {
-            if (!hasPlayed2) {
-                const canvas = document.getElementById("pyramide");
-                const rect = canvas.getBoundingClientRect();
-                if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-                    lottieAnimation3.play();
-                hasPlayed2 = true;
-                }
-                }
-            });
-
-        </script>
+        <div class="section8__pyramid">
+            <div class="section8__cone">
+                <h3 class="section8__cone-title">Média</h3>
+            </div>
+            <div class="section8__cone-stat">
+                <h3>37%</h3>
+                <div class="section8__cone-line"></div>
+            </div>
+    
+    
+            <div class="section8__mid">
+                <h3 class="section8__mid-title">Gouvernement ONG*</h3>
+            </div>
+    
+            <div class="section8__mid-stat">
+                <div class="section8__mid-stat1">
+                    <h3>50%</h3>
+                    <div class="section8__mid-line"></div>
+                </div>
+    
+                <div class="section8__mid-stat2">
+                    <h3>52%</h3>
+                    <div class="section8__mid-line"></div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="section8__base">
+                <h3 class="section8__base-title">Entreprise</h3>
+            </div>
+    
+            <div class="section8__base-stat">
+                <h3>51%</h3>
+                <div class="section8__base-line"></div>
+            </div>
+    
         </div>
-
 
         <div class="section8__container-text">
             <p class="section8__text">La pyramide de la confiance illustre la hiérarchie perçue par les Français : les entreprises restent stables, tandis que la confiance envers les médias demeure faible.</p>
@@ -382,6 +380,46 @@
     </section>
 
 
+    
+
+    <section class="section10__container">
+        <div class="section10__container-titre">
+            <h2 class="section10__titre">Les médias sociaux, malgré leurs avantages, facilitent la propagation des fake news.        
+            </h2>
+            <h3 class="section10__soustitre">
+                Pour éviter de se faire <span class="section10__span">piéger :</span>
+            </h3>
+        </div>
+            <div class="section10__container-text">
+                <div class="section10__box-text">
+                    <p class="section10__text">
+                        <span>Vérifiez la source :</span> Assurez-vous que l’information provient d’un média ou d’un expert fiable.
+                        <img class="section10__icon" src="./assets/verif.svg" alt="">
+                    </p>
+                </div>
+                <div class="section10__box-text">
+                    <p class="section10__text">
+                        <span>Faites attention aux titres :</span> Les contenus trop choquants ou sensationnalistes sont souvent trompeurs.
+                        <img class="section10__icon" src="./assets/attention.svg" alt="">
+                    </p>
+                </div>
+                <div  class="section10__box-text">
+                    <p class="section10__text">
+                        <span>Utilisez des outils de vérification :</span> Des applications comme NewsGuard aident à analyser la crédibilité des informations.
+                        <img class="section10__icon" src="./assets/outil.svg" alt="">
+                    </p>
+                </div>
+                <div class="section10__box-text">
+                    <p class="section10__text">
+                        <span>Ne partagez pas impulsivement :</span> Prenez le temps de vérifier avant de diffuser une information.
+                        <img class="section10__icon" src="./assets/partage.svg" alt="">
+                    </p>
+                </div>
+                    <p class="section10__conclusion">
+                        En adoptant ces réflexes, chacun peut contribuer à limiter la désinformation sur les médias sociaux et promouvoir une culture numérique plus saine et responsable.
+                    </p>
+                </div>
+    </section>
 
     <footer class="footer__container" id="footer">
         <ul class="footer__container-text">

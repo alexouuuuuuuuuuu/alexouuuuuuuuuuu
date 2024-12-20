@@ -147,7 +147,141 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: "power2.out",
         stagger: 0.1,
     });
+
+
     
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section8',
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: true,
+            markers: false,
+            toggleActions: "play none none none"
+        }
+    })
+    .fromTo(
+        ".section8", 
+        { x: "-100%", opacity: 0 },
+        { x: "0%", opacity: 1, duration: 1, ease: "power2.out" }
+    )
+    .fromTo(
+        ".section8__mid",
+        { x: "-100%", opacity: 0 },
+        { x: "0%", opacity: 1, duration: 1, ease: "power2.out" },
+        "<0.5"
+    )
+    .fromTo(
+        ".section8__base",
+        { x: "-100%", opacity: 0 },
+        { x: "0%", opacity: 1, duration: 1, ease: "power2.out" },
+        "<0.5"
+    );});
+
+
+    const ball1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__boule-rose1',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball1.to('.section7__boule-rose1', { x: '40vw', y: '-40vh', duration: 1 });
+
+
+    const ball2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__info1',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball2.to('.section7__info1', { x: '30vw', y: '-30vh', duration: 1 });
+
+    const ball3 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__info2',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball3.to('.section7__info2', { x: '50vw', y: '-50vh', duration: 1 });
+
+
+    const ball4 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__boule-violet1',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball4.to('.section7__boule-violet1', { x: '60vw', y: '-30vh', duration: 1 });
+
+    const ball5 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__boule-jaune2',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball5.to('.section7__boule-jaune2', { x: '70vw', y: '-10vh', duration: 1 });
+
+
+    const ball6 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__boule-bleu',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball6.to('.section7__boule-bleu', { x: '30vw', y: '-45vh', duration: 1 });
+
+
+    const ball7 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__boule-violet2',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball7.to('.section7__boule-violet2', { x: '30vw', y: '-10vh', duration: 1 });
+
+
+    const ball8 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__info3',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball8.to('.section7__info3', { x: '40vw', y: '-15vh', duration: 1 });
+
+    const ball9 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section7__info4',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: true,
+        }
+    });
+
+    ball9.to('.section7__info4', { x: '30vw', y: '0vh', duration: 1 });
 
 
     // Animation des marionnettes
@@ -171,5 +305,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrub: true,
     });
     
-});
 
