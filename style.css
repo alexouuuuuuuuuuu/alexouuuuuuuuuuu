@@ -65,7 +65,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 200vh;
@@ -94,18 +93,24 @@ body{
 }
 
 
-.section1__image-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.section1__image-text {
     position: absolute;
     font-size: 8rem;
     z-index: 10;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 2rem;
+    top: 20%;
+    left: 24%;
+    animation: zoomIn 1.2s ease-in forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .section1__text{
@@ -115,10 +120,9 @@ body{
 
 
 .section2__container{
+    display: flex;
+    justify-content: center;
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     height: 200vh;
     margin-top: 5rem;
 }
@@ -130,108 +134,136 @@ span{
 
 .section2__container-image{
     position: absolute;
-    right: 10rem;
+    background-color: var(--clr-bg);
+    height: 30rem;
+    right: -5%;
     top: 10%;
+    padding-right: 10%;
 }
 
 
 .section2__container-forme1{
     position: absolute;
-    left: 15rem;
-    top: 10rem;
-    background-image: url(./assets/forme1.svg);  
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 30vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    top: 20%;
     z-index: -1;
 }
 
+
+
 .section2__image-text1{
-    position: absolute;
-    left: 20rem;
-    top: 15rem;
     max-width: 30rem;
+    z-index: 1;
+}
+
+.section2__forme1{
+    position: absolute;
+    width: 35rem;
+    height: 25rem;
+    z-index: -1;
 }
 
 .section2__container-forme2{
     position: absolute;
-    left: 0rem;
-    top: 26rem;
-    background-image: url(./assets/forme2.svg);  
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    top: 20%;
     z-index: -1;
 }
 
 .section2__image-text2{
-    position: absolute;
-    left: 8rem;
-    top: 35rem;
     max-width: 20rem;
+    z-index: 1;
+
 }
+
+.section2__forme2{
+    position: absolute;
+    width: 35rem;
+    height: 25rem;
+    z-index: -1;
+}
+
 
 
 .section2__container-forme3{
     position: absolute;
-    left: 5rem;
-    bottom: 45rem;
-    background-image: url(./assets/forme3.svg);  
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    top: 20%;
     z-index: -1;
 }
 
 .section2__image-text3{
-    position: absolute;
-    left: 15rem;
-    bottom: 52rem;
     max-width: 40rem;
+    z-index: 1;
+    margin: 0;
+    margin-right: -7rem;
 }
+
+.section2__forme3{
+    position: absolute;
+    width: 50rem;
+    height: 40rem;
+    z-index: -1;
+
+}
+
 
 
 
 .section2__container-forme4{
     position: absolute;
-    left: 40rem;
-    bottom: 25rem;
-    background-image: url(./assets/forme4.svg);  
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    top: 20%;
     z-index: -1;
 }
 
 .section2__image-text4{
-    position: absolute;
-    left: 48rem;
-    bottom: 33rem;
     max-width: 30rem;
+    z-index: 1;
+
+}
+
+.section2__forme4{
+    position: absolute;
+    width: 45rem;
+    height: 30rem;
+    z-index: -1;
 }
 
 
 .section2__container-forme5{
     position: absolute;
-    left: 80rem;
-    bottom: 35rem;
-    background-image: url(./assets/forme5.svg);  
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    top: 20%;
     z-index: -1;
 }
 
 .section2__image-text5{
-    position: absolute;
-    left: 85rem;
-    bottom: 47rem;
     max-width: 25rem;
+    z-index: 1;
+    margin-bottom: 1rem;
+}
+
+.section2__forme5{
+    position: absolute;
+    width: 40rem;
+    height: 33rem;
+    z-index: -1;
 }
 
 
@@ -279,7 +311,6 @@ span{
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -293,6 +324,19 @@ span{
 
 }
 
+
+.section4__container-fille{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.section4__fille{
+    position: absolute;
+    width: 20rem;
+    
+}
+
 .section4__container-image{
     position: relative;
     display: flex;
@@ -301,7 +345,7 @@ span{
 
 }
 
-.section4__container-text{
+/* .section4__container-text{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -310,7 +354,23 @@ span{
 .section4__desc{
     width: 70%;
     text-align: center;
-}
+} */
+
+.section4__container-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .section4__desc {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    opacity: 1; /* Le texte est invisible au départ */
+  }  
+
+
 
 .section5__container{
     background-image: url(./assets/bk-section5.svg);
@@ -324,6 +384,33 @@ span{
     justify-content: center;
 }
 
+
+
+.section5__container-garcon{
+    display: flex;
+    justify-content: start;
+    
+}
+
+.section5__garcon{
+    position: absolute;
+    width: 20rem;
+    
+}
+
+
+.section4__graphe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 85rem;
+    height: 40rem;
+    min-width: 45rem;
+    max-height: fit-content;
+}
+
 .section5__desc{
     display: flex;
     justify-content: center;
@@ -335,7 +422,7 @@ span{
 
 .section6__container {
     position: relative;
-    height: 100vh; /* Section pleine hauteur */
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,16 +434,25 @@ span{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Conteneur couvrant toute la section */
-    pointer-events: none; /* Les boules ne bloquent pas les clics */
+    height: 100%; 
+    pointer-events: none; 
 }
+
+
+
+
+
+
+
+
+
 
 
 
 .section7__container {
     position: relative;
     display: flex;
-    flex-direction: row;
+    justify-content: start;
     align-items: center;
     margin-block: 20rem;
 }
@@ -371,69 +467,109 @@ span{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+
+.section7__boule-rose1 {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--clr-pink);
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+.section7__boule-jaune1{
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    z-index: 0;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--clr-yellow);
+    border-radius: 100%;
 }
 
-.section7__boule-bleu,
-.section7__boule-rose,
-.section7__boule-rose2,
-.section7__boule-violette,
-.section7__boule-violette2,
-.section7__boule-violette3,
-.section7__boule-jaune,
-.section7__boule-verte,
-.section7__boule-jaune2 {
-    position: absolute;
+.section7__boule-jaune1-text{
+    font-size: 2rem;
+    margin: 0;
 }
 
-.section7__boule-bleu {
-    top: -5rem;
-    left: -17rem;
+.section7__info1-text{
+    font-size: 1rem;
+    width: 20rem;
+    margin: 0;
 }
 
-.section7__boule-rose {
-    top: -20rem;
-    left: -1rem;
+
+.section7__boule-vert1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--clr-green);
+    border-radius: 100%;
 }
 
-.section7__boule-rose2 {
-    top: -5rem;
-    left: 13rem;
+.
+
+
+
+.section7__info1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
-.section7__boule-violette {
-    top: 3rem;
-    left: -10rem;
+.section7__info2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
-.section7__boule-violette2 {
-    top: -4rem;
-    left: -0rem;
+.section7__info3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
 }
 
-.section7__boule-violette3 {
-    top: -13rem;
-    left: 20rem;
+.section7__info4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
-.section7__boule-jaune {
-    top: -22rem;
-    left: 8rem;
-}
 
-.section7__boule-jaune2 {
-    top: -11rem;
-    left: 30rem;
-}
 
-.section7__boule-verte{
-    top: -16rem;
-    left: -12rem;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .footer__container{
@@ -518,17 +654,9 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 30rem;
 }
 
-.section4__graphe{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    width: 85rem;
-    height: 40rem;
-}
 
 .section8__graphe{
     display: flex;
@@ -537,6 +665,8 @@ span{
     margin-block: 5rem;
     width: 100rem;
     height: 40rem;
+    max-width: 60rem;
+    max-height: fit-content;
 }
 
 .section8__titre{
@@ -583,41 +713,34 @@ span{
     right: 5%;
 }
 
-.section10__container {
+.section9__container {
     margin-top: 10rem;
     margin-bottom: 10rem;
 
 }
 
 
-.section10__marionnette-container {
+.section9__marionnette-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Pour permettre un placement absolu des enfants */
-    height: 900px; /* Ajuste en fonction de tes besoins */
-    overflow: hidden; /* Empêche les images de dépasser */
+    position: relative; 
+    height: 800px; 
+    overflow: hidden; 
 }
 
-.section10__container img {
+.section9__container img {
+    display: flex;
     width: 30%;
-    height: auto;
-    object-fit: cover;
     min-width: 30rem;
 }
 
-.section10__marionnette1 {
-    position: absolute; /* Positionnement relatif au parent */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
+.section9__marionnette1 {
+    position: absolute; 
 }
 
-.section10__marionnette2 {
-    position: absolute; /* Positionnement relatif au parent */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
+.section9__marionnette2 {
+    position: absolute; 
 }
 
 .section3__star1{

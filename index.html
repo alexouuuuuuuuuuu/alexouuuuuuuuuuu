@@ -28,47 +28,13 @@
 
     <section class="section1__container">
         <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section1__star">
-        <script>
-            const etoile = document.querySelector('.section1__star');
-
-            function rotateEtoile() {
-            gsap.to(etoile, {
-                duration: 1, 
-                rotation: '+=360', 
-                ease: 'power2.inOut',
-                onComplete: () => {
-                }
-            });
-            }
-
-            setInterval(rotateEtoile, 5000);
-        </script>
-
-
         <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section1__star2">
-        <script>
-        const etoile2 = document.querySelector('.section1__star2');
-        
-        function rotateEtoile2() {
-        gsap.to(etoile2, {
-            duration: 1, 
-            rotation: '+=360', 
-            ease: 'power2.inOut', 
-            onComplete: () => {
-            }
-        });
-        }
 
-        setInterval(rotateEtoile2, 5000);
-        </script>
-        
-                    // Boucle d'animation toutes les 5 secondes
-                    setInterval(rotateEtoile, 5000);
-                </script>
         <div class="section1__container-image">
             <img src="./assets/feu-de-camp.svg" alt="feu de camp">
             <h2 class="section1__image-text">94%</h2>
         </div>
+        
         <h3 class="section1__text">des Français s’informent tous les jours</h3>
         <img class="section1__fille" src="./assets/fille.svg" alt="fille a droite qui s'amuse">
         <img class="section1__garcon" src="./assets/garcon.svg" alt="garcon a gauche qui s'amuse">
@@ -84,30 +50,58 @@
             <img src="./assets/diagramme.svg" alt="diagramme">
         </div>
         
-        <div class="section2__container-forme1"></div>
+        <div class="section2__container-forme1">
+            <img class="section2__forme1" src="./assets/forme1.svg" alt="forme 1 ">
             <p class="section2__image-text1">Les programmes d’information à la télévision et à la radio demeurent des sources majeures pour les Français.</p>
         </div>
 
-        <div class="section2__container-forme2"></div>
+        <div class="section2__container-forme2">
+            <img class="section2__forme2" src="./assets/forme2.svg" alt="forme 2">
             <p class="section2__image-text2"><span>80%</span> des Français s’informent au moins une fois par semaine via une chaîne de télévision, dont <span>66%</span> quotidiennement.</p>
         </div>
 
-        <div class="section2__container-forme3"></div>
+        <div class="section2__container-forme3">
+            <img class="section2__forme3" src="./assets/forme3.svg" alt="forme 3">
             <p class="section2__image-text3">Les réseaux sociaux et les plateformes vidéo sont consultés quotidiennement par un Français sur deux <span>53%</span> pour s’informer.</p>
         </div>
 
-        <div class="section2__container-forme4"></div>
+        <div class="section2__container-forme4">
+            <img class="section2__forme4" src="./assets/forme4.svg" alt="forme 4">
             <p class="section2__image-text4">Les jeunes privilégient les réseaux sociaux et les moteurs de recherche, mais 46% des 15-19 ans 
                 regardent une chaîne de télévision au moins une fois par jour, et <span>69%</span> au moins une fois par semaine.</p>
         </div>
-    
-        <div class="section2__container-forme5"></div>
+
+        <div class="section2__container-forme5">
+            <img class="section2__forme5" src="./assets/forme5.svg" alt="forme 5">
             <p class="section2__image-text5">79% des Français suivent régulièrement au moins un journal télévisé, tandis que <span>61%</span> consultent les chaînes d’information.</p>
         </div>
-    </div>
-
     </section>
 
+    <script>
+        const section2 = document.querySelector('.section2__container');
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: section2,
+                start: 'top center',
+                end: 'bottom center',
+                toggleActions: 'play none none none',
+            }
+        });
+
+        t1.to('.section2__container-forme5', { x: -1000, duration: 0.5 })
+          .to('.section2__container-forme5', { y: 800, duration: 0.5 })
+          .to('.section2__container-forme5', { x: 50, duration: 0.5 })
+          .to('.section2__container-forme4', { x: -1000, duration: 0.5 })
+          .to('.section2__container-forme4', { y: 600, duration: 0.5 })
+          .to('.section2__container-forme4', { x: -500, duration: 0.5 })
+          .to('.section2__container-forme3', { x: -1100, duration: 0.5 })
+          .to('.section2__container-forme3', { y: 800, duration: 0.5 })
+          .to('.section2__container-forme2', { x: -1200, duration: 0.5 })
+          .to('.section2__container-forme2', { y: 350, duration: 0.5 })
+          .to('.section2__container-forme1', { x: -1100, duration: 0.5 })
+          .to('.section2__container-forme1', { y: 0, duration: 0.5 });
+    </script>
 
 
     
@@ -118,20 +112,23 @@
         <img class="section3v2__image" src="./assets/ordinateur.svg" alt="ordinateur avec dedans un graphe">
         <script>
             const ordinateur = document.querySelector('.section3v2__image');
-            gsap.to(ordinateur, {
-                y: 20, // Change the value to adjust the descent speed
-                duration: 2,
+
+            gsap.fromTo(ordinateur, 
+            { opacity: 0, scale: 0.5, rotation: 0 }, 
+            { 
+                opacity: 1, 
+                scale: 1, 
+                rotation: 360, 
+                duration: 2, 
+                ease: "elastic.out(1, 0.3)",
                 scrollTrigger: {
-                    trigger: '.section3v2__image',
-                    toggleActions: 'restart reverse play reverse',
-                    start: 'center center', // Change the start position to 'center center'
-                    end: 'bottom center',
-                    markers: true,
-                    scrub: 1,
-                    pin : true,
-                },
-            });
-            
+                trigger: '.section3v2__container',
+                start: 'top center',
+                end: 'bottom center',
+                toggleActions: 'play none none none',
+                }
+            }
+            );
         </script>
     </section>
 
@@ -144,29 +141,15 @@
         <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section3__star3 scroll-object">
         <img src="./assets/etoile.svg" alt="étoile qui tourne" class="section3__star4 scroll-object">
 
-        <script>
-            const scrollObjects = document.querySelectorAll('.scroll-object');
 
-            function rotateOnScroll() {
-            const scrollTop = window.scrollY; 
-            const rotationValue = scrollTop * 0.2;
-
-            scrollObjects.forEach(scrollObject => {
-                gsap.to(scrollObject, {
-                duration: 0.2, 
-                rotation: rotationValue, 
-                ease: 'none', 
-                });
-            });
-            }
-
-            window.addEventListener('scroll', rotateOnScroll);
-        </script>
 
     </section>
 
 
     <section class="section4__container">
+        <div class="section4__container-fille">
+            <img src="./assets/fille2.svg" class="section4__fille" alt="fille">
+        </div>
         <h2>Les Français s’informent davantage</h2>
         <div class="section4__container-image">
 
@@ -199,15 +182,17 @@
 
         </div>
         <div class="section4__container-text">
-            <p class="section4__desc">En 2023, l'envie de s'informer davantage 
-                l'emporte sur la tendance 
-                à se détourner de l'actualité.
-                <span>32%</span> des Français déclarent s'informer plus, 
-                poussés par la complexité de l'actualité
-                 et le besoin de rester à jour.
-                Ce sont principalement des jeunes, connectés,
-                 qui privilégient les réseaux sociaux.</p>
-        </div>
+            <p id="scramble" class="section4__desc">
+              En 2023, l'envie de s'informer davantage 
+              l'emporte sur la tendance à se détourner de l'actualité.
+              <span>32%</span> des Français déclarent s'informer plus, 
+              poussés par la complexité de l'actualité
+              et le besoin de rester à jour.
+              Ce sont principalement des jeunes, connectés,
+              qui privilégient les réseaux sociaux.
+            </p>
+          </div>
+          
         
     </section>
 
@@ -243,6 +228,9 @@
         </script>
         </div>
         <p class="section5__desc">En moyenne, les Français consultent régulièrement 9 sources d’information.</p>
+        <div class="section5__container-garcon">
+            <img src="./assets/garcon2.svg" class="section5__garcon" alt="garcon">
+        </div>
     </section>
 
 
@@ -265,47 +253,6 @@
         </div>
     </section>
 
-
-    <script>
-        // Initialisation de GSAP et ScrollTrigger
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Sélection de toutes les boules
-        const balls = document.querySelectorAll('.section6__ball, .section6__triangle, .section6__rect, .section6__carre');
-        const container = document.getElementById('container');
-        const section = document.querySelector('.section6__container');
-
-        // Centre de la section
-        const sectionRect = section.getBoundingClientRect();
-        const centerX = sectionRect.width / 2 ;
-        const centerY = sectionRect.height / 2;
-
-        // Position initiale des boules : toutes au même point (centre de la section)
-        balls.forEach(ball => {
-            ball.style.left = `${centerX}px`;
-            ball.style.top = `${centerY}px`;
-        });
-
-        // Animation de dispersion au scroll
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: section,
-                start: "top center", // L'animation commence quand le haut de la section est visible au centre
-                end: "bottom top", // L'animation termine quand le bas de la section quitte le haut de la fenêtre
-                scrub: true, // Synchronisation avec le défilement
-                once: true, // L'animation se joue une seule fois
-            },
-        }).to(balls, {
-            x: () => Math.random() * sectionRect.width * 1.5 - centerX, // Dispersion horizontale aléatoire
-            y: () => Math.random() * sectionRect.height * 1.2 - centerY, // Dispersion verticale aléatoire
-            rotation: () => Math.random() * 360, // Rotation aléatoire
-            scale: () => 0.8 + Math.random() * 0.5, // Variation de taille aléatoire
-            duration: 2,
-            ease: "power2.out", // Mouvement fluide
-            stagger: 0.1, // Les boules se dispersent l'une après l'autre
-        });
-    </script>
-
     
     <section class="section7__container">
         <div class="section7__container-image">
@@ -313,19 +260,61 @@
         </div>
 
         <div class="section7__container-boules">
-            <img src="./assets/section7/boule-bleu.svg" alt="boule" class="section7__boule-bleu">
-            <img src="./assets/section7/boule-rose.svg" alt="boule" class="section7__boule-rose">
-            <img src="./assets/section7/boule-rose2.svg" alt="boule" class="section7__boule-rose2">
-            <img src="./assets/section7/boule-violette.svg" alt="boule" class="section7__boule-violette">
-            <img src="./assets/section7/boule-violette2.svg" alt="boule" class="section7__boule-violette2">
-            <img src="./assets/section7/boule-violete3.svg" alt="boule" class="section7__boule-violette3">
-            <img src="./assets/section7/boule-jaune.svg" alt="boule" class="section7__boule-jaune">
-            <img src="./assets/section7/boule-jaune2.svg" alt="boule" class="section7__boule-jaune2">
-            <img src="./assets/section7/boule-verte.svg" alt="boule" class="section7__boule-verte">
 
+
+            <div class="section7__boule-rose1">
+            </div>
+
+            <div class="section7__info1">
+                <div class="section7__boule-jaune1">
+                    <p class="section7__boule-jaune1-text">30%</p>
+                </div>
+                <p class="section7__info1-text">
+                    Des français déclarent avoir deja relayé une fake news
+                </p>
+            </div>
+
+            <div class="section7__info2">
+                <div class="section7__boule-vert1">
+                    <p class="section7__boule-vert1-text">76%</p>
+                </div>
+                <p class="section7__info2-text">
+                    Des français sont exposé au moins 1 fois par mois aux fake news
+                </p>
+            </div>
+
+            <div class="section7__boule-violet1">   
+            </div>
+
+            <div class="section7__boule-jaune2">
+            </div>
+
+            <div class="section7__boule-bleu">
+            </div>
+
+            <div class="section7__boule-violet">
+            </div>
+
+
+            <div class="section7__info3">
+                <div class="section7__boule-rose2">
+                    <p class="section7__boule-rose2-text">22%</p>
+                </div>
+                <p class="section7__info3-text">
+                    Des français ne croisent pas leurs sources pour vérifier une information lue sur Internet
+                </p>
+            </div>
+
+            <div class="section7__info4">
+                <div class="section7__boule-violet3">
+                    <p class="section7__boule-violet3-text">72%</p>
+                </div>
+                <p class="section7__info3-text">
+                    Des français pensent qu’il est difficile de distinguer un média serieux qui relaye des vraies informations, d’un site relayant des informations non vérifiées
+                </p>
+            </div>
 
         </div>
-        
     </section>
 
 
@@ -373,16 +362,11 @@
 
 
 
-
-
-
-
-
-    <section class="section10__container">
+    <section class="section9__container">
         <h2>Plus de 60% des Français adhèrent à au moins une théorie complotiste</h2>
-        <div class="section10__marionnette-container">
-            <img src="./assets/marionnette1.svg" alt="marionnette 1" class="section10__marionnette1">
-            <img src="./assets/marionnette2.svg" alt="marionnette 2" class="section10__marionnette2">
+        <div class="section9__marionnette-container">
+            <img src="./assets/marionnette1.svg" alt="marionnette 1" class="section9__marionnette1">
+            <img src="./assets/marionnette2.svg" alt="marionnette 2" class="section9__marionnette2">
         </div>
     </section>
 
@@ -415,10 +399,11 @@
 
     
 
-   
-
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrambleTextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
