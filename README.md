@@ -1,21 +1,20 @@
-# **Sensibilisation aux Fake News - Onepage** 👋
+# **L’évolution du rapport des Français à l’information - Onepage**
 
 ## **Description du projet**
 Ce projet vise à sensibiliser les jeunes d'environ 20 ans  à l'évolution des Français face à l'information et à l'audiovisuel, tout en mettant l'accent sur les **fake news**. À travers une interface interactive et visuellement engageante, nous souhaitons informer, alerter et fournir des outils pour repérer et contrer la désinformation.
-La onepage s’ouvre sur des statistiques générales sur les habitudes d’information des Français, suivies d’une visualisation des sources médiatiques principales. Elle aborde ensuite les fake news avec des explications et exemples. La conclusion souligne l’importance de l’esprit critique et encourage à réfléchir avant de partager des informations.
+La onepage s’ouvre sur des statistiques générales sur les habitudes d’information des Français, suivies d’une visualisation des sources médiatiques principales. Elle aborde ensuite les fake news avec des explications et des exemples.
 
 ## **Objectifs**
 - Informer sur les habitudes médiatiques des Français
 - Expliquer les impacts des **fake news** sur la société
 - Apprendre à détecter la désinformation
-- Sensibiliser à la diversité des sources et à l’importance du fact-checking
+- Sensibiliser à la diversité des sources
 
 
 ## **Technologies utilisées**
-- **HTML / CSS / JavaScript** : Conception et animations interactives.
-- **Figma** : Design et prototypage.
-- **Illustrator** : Illustrations personnalisées.
-- **GitHub Pages** : Hébergement du site web.
+- **HTML / CSS / JavaScript** : Conception et animations interactives de nos éléments
+- **Figma** : Design et prototypage de notre site
+- **GitHub** : Contenu global et hébergement de notre site web
 
 ## **Liens utiles**
 - **Prototype Figma :** [Accéder au prototype Figma](https://www.figma.com/design/Th3Cpg5mMj05iTBTMyOAWJ/SAE-303?node-id=0-1&t=iBqSErG8UtxcPK8A-1)  
@@ -23,7 +22,7 @@ La onepage s’ouvre sur des statistiques générales sur les habitudes d’info
 
 ## **Affiches PDF**
 
-Vous pouvez consulter les affiches en PDF en lien avec les Fake News :
+Vous pouvez consulter les affiches PDF en lien avec les Fake News :
 
 - [Affiches Fake News](https://github.com/alexouuuuuuuuuuu/alexouuuuuuuuuuu/blob/5b9e712dd871c48e2958358abacfe737cd08011e/affiche/affiche_fake_news.pdf)
 
