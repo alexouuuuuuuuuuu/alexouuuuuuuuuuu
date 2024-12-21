@@ -31,9 +31,9 @@ Vous pouvez consulter les affiches en PDF en lien avec les Fake News :
 
 Ce projet a été réalisé par une équipe de 3 personnes :
 
-- **[Alexis Maugain](#)**  
-- **[Arda Gunduz](#)**  
-- **[Louka Poulbrière](#)**
+- **Alexis Maugain**  
+- **Arda Gunduz**  
+- **Louka Poulbrière**
 
 Merci pour votre attention et votre intérêt pour notre projet !
 
