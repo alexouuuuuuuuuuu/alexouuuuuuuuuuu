@@ -27,6 +27,16 @@ Vous pouvez consulter les affiches en PDF en lien avec les Fake News :
 
 - [Affiches Fake News](https://github.com/alexouuuuuuuuuuu/alexouuuuuuuuuuu/blob/5b9e712dd871c48e2958358abacfe737cd08011e/affiche/affiche_fake_news.pdf)
 
+### **Équipe :**
+
+Ce projet a été réalisé par une équipe de 3 personnes :
+
+- **[Alexis Maugain](#)**  
+- **[Arda Gunduz](#)**  
+- **[Louka Poulbrière](#)**
+
+Merci pour votre attention et votre intérêt pour notre projet !
+
 <!--
 **alexouuuuuuuuuuu/alexouuuuuuuuuuu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
