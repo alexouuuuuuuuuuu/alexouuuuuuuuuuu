@@ -1,7 +1,7 @@
 # **L’évolution du rapport des Français à l’information - Onepage**
 
 ## **Description du projet**
-Ce projet vise à sensibiliser les jeunes d'environ 20 ans  à l'évolution des Français face à l'information et à l'audiovisuel, tout en mettant l'accent sur les **fake news**. À travers une interface interactive et visuellement engageante, nous souhaitons informer, alerter et fournir des outils pour repérer et contrer la désinformation.
+Ce projet vise à sensibiliser les jeunes d'environ 20 ans  à l'évolution des Français face à l'information et à l'audiovisuel, tout en mettant l'accent sur les **fake news**. À travers notre site, nous souhaitons informer et alerter les gens pour repérer et contrer la désinformation.
 La onepage s’ouvre sur des statistiques générales sur les habitudes d’information des Français, suivies d’une visualisation des sources médiatiques principales. Elle aborde ensuite les fake news avec des explications et des exemples.
 
 ## **Objectifs**
