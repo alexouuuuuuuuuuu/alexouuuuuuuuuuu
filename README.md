@@ -25,7 +25,7 @@ La onepage s’ouvre sur des statistiques générales sur les habitudes d’info
 
 Vous pouvez consulter les affiches en PDF en lien avec les Fake News :
 
-- [Affiches Fake News](https://acrobat.adobe.com/id/urn:aaid:sc:EU:ab6ea41d-9f72-4b40-87c6-d698454022ca )
+- [Affiches Fake News](https://github.com/alexouuuuuuuuuuu/alexouuuuuuuuuuu/blob/5b9e712dd871c48e2958358abacfe737cd08011e/affiche/affiche_fake_news.pdf)
 
 <!--
 **alexouuuuuuuuuuu/alexouuuuuuuuuuu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
